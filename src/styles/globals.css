@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
-.Card{
+.Card {
     flex: 0 1 33%;
+}
+
+html,
+body {
+    @apply bg-slate-600
 }

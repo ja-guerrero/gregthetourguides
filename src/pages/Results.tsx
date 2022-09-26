@@ -8,11 +8,11 @@ export default function Results() {
     const {location,data} = useSelector((state:any) => state.dataparams)
     const dispatch = useDispatch()
     useEffect(()=> {
-        fetch(`./api/Restaurants`)
+        fetch(`./api/Restaurants?zipcode=${location}`)
         .then((res) => res.json())
-        .then((data) =>  {
+        .then((json) =>  {
+            dispatch(updateData(json))
             console.log(data)
-            dispatch(updateData(data))
         })
         
     },[])

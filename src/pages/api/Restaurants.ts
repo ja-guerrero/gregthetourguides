@@ -1,4 +1,4 @@
-const apiKey = '_OujvLf_bVdDVtcklVd6MkAyuEG4nrcHz7MUzKNZFeVrWfsDJF9rzkxQr7MuzHg5zGfbqWRxYW_TgcYF5n2OvmVR6lK1c5ahiQZ5IMVe4srwtTZqjlOdpIht84edYnYx';
+const apiKey = process.env.YELP_API
 
 export default async function handleYelpCall(req: any, res: any) {
   const headers = {

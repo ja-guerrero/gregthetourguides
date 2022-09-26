@@ -7,7 +7,7 @@ export default async function handleYelpCall(req: any, res: any) {
   }
   const zipcode = req.query.zipcode
   const term = req.query.term
-  await fetch(`https://api.yelp.com/v3/businesses/search?term=Restaurant&location=10463&limit=5`, {
+  await fetch(`https://api.yelp.com/v3/businesses/search?term=Restaurant&location=10463&limit=6`, {
     headers: headers,
     method: "GET"
   }).then((res) => res.json())

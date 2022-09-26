@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import Card from '../components/Card'
 import dataparams, {updateData} from '../redux/dataparams'
 
 export default function Results() {
@@ -18,14 +19,19 @@ export default function Results() {
    
     
   return (
-    <div>
-        Hello
+    <div className='Restaraunts'>
+        <div className="header flex justify-center "> 
+        <h1>Top Places near you!</h1>
+        </div>
+        <div className='Cards flex flex-wrap justify-between items-center'>
         {data.businesses?.map(function(buisness:any) {
-            return(<li key={buisness.id} >
-                {buisness.name}
-            </li>)
+            return(
+            <Card key={buisness.id} phone={buisness.phone} name={buisness.name} description={buisness.rating} img={buisness.image_url}/>
+                
+           )
             
         })}
+        </div>
         
     </div>
   )
